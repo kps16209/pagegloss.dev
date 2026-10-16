@@ -3,28 +3,141 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pagegloss</title>
-<meta name="description" content="Pagegloss is an iPad reader for PDFs, ebooks and pictures. Hold a word to see its meaning in its own sentence.">
+<title>Pagegloss · Touch a word. Understand the page.</title>
+<meta name="description" content="Touch a word. Understand the page. Pagegloss is an iPad reader for PDFs, ebooks and pictures of pages: touch and hold a word to see its meaning in its own sentence, translated on your iPad. No account, no ads, no tracking.">
+<meta name="theme-color" content="#1d5d52">
+<link rel="icon" href="/images/icon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="stylesheet" href="/style.css">
+<script src="/theme.js"></script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <a class="brand" href="/">Pagegloss</a>
-    <nav><a href="/support/">Support</a><a href="/privacy/">Privacy</a></nav>
-  </header>
-  <main>
-    <h1>Read in another language, one held word at a time.</h1>
-    <p class="lede">Pagegloss is an iPad reader for PDFs, ebooks and pictures of pages. Touch and hold a word to see what it means in its own sentence, then save it, highlight it or add a note.</p>
-    <ul>
-      <li><strong>PDF, EPUB and AZW3</strong>, plus photos and scans of pages, whose text Pagegloss reads on your iPad.</li>
-      <li><strong>Translation on your iPad</strong> with Apple's languages, or an online service you choose with your own key.</li>
-      <li><strong>Highlights and notes</strong>, typed or written with Apple Pencil, kept with your book.</li>
-      <li><strong>Private by design:</strong> no account, no ads, no tracking. Your documents stay on your iPad.</li>
-    </ul>
-    <p class="muted">Pagegloss is for iPad.</p>
-  </main>
-  <footer>Questions? <a href="/support/">Support</a> · <a href="/privacy/">Privacy policy</a></footer>
-</div>
+
+<header class="sheet">
+  <div class="nav">
+    <a class="brand" href="/"><img src="/images/icon-64.png" alt="" width="28" height="28">Pagegloss</a>
+    <nav>
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy</a>
+      <div class="theme" role="group" aria-label="Appearance">
+        <button type="button" data-theme="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <div class="copy">
+      <span class="eyebrow"><i></i>Coming to the App Store · iPad</span>
+      <h1>Touch a word.<br>Understand the <span>page.</span></h1>
+      <p class="lede">An iPad reader for PDFs, ebooks and pictures of pages. Touch and hold any word to see its meaning in its own sentence, translated on your iPad.</p>
+      <div class="cta">
+        <span class="pill solid">Coming to the App Store</span>
+        <a class="pill ghost" href="#how">See how it works</a>
+      </div>
+      <p class="fine">PDF · EPUB · AZW3 · photos and scans. No account, no ads, no tracking.</p>
+    </div>
+
+    <div class="demo" aria-label="A held word and its meaning, as shown on the iPad">
+      <div class="book">
+        <span class="ch">Chapter XIV · Recapitulation and Conclusion</span>
+        There is <span class="held">grandeur<span class="finger"></span></span> in this view of life, with its several powers, having been originally breathed into a few forms or into one; and that, whilst this planet has gone cycling on according to the fixed law of gravity, from so simple a beginning endless forms most beautiful and most wonderful have been, and are being, evolved.
+      </div>
+      <div class="panel">
+        <div class="grip"></div>
+        <div class="ptitle"><b>grandeur</b><span class="ipa">/ˈɡrændʒər/</span></div>
+        <div class="psub">Page 487 · Recognized text</div>
+        <div class="lang"><span>English → Spanish</span><span aria-hidden="true">⌄</span></div>
+        <div class="ready">On this iPad · ready offline</div>
+        <div class="segc"><span class="on">Word</span><span>Whole sentence</span></div>
+        <div class="tr"><small>Translation</small><div class="out">Grandeza</div></div>
+        <div class="acts"><span>Copy translation</span><span>Save</span><span>Highlight</span><span>Note</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="bar" aria-label="At a glance">
+    <div><b>Real books, real PDFs</b><span>PDF, EPUB and AZW3 without copy protection.</span></div>
+    <div><b>Pictures of pages</b><span>Photos, scans and the camera. The text is read on the iPad.</span></div>
+    <div><b>Offline translation</b><span>Apple's languages, once downloaded.</span></div>
+    <div><b>Your own key, if you want</b><span>Google, OpenAI, Gemini or DeepSeek.</span></div>
+  </section>
+
+  <section class="sect" id="how">
+    <h2 class="kicker">What a word means here, not everywhere.</h2>
+    <p class="sub">The panel shows the meaning of the word in this sentence. Whole sentence translates the sentence; on supported iPads, Apple Intelligence explains it. English words show their pronunciation.</p>
+
+    <div class="tiles">
+      <div class="tile">
+        <h3>Hold a word, even on a scanned page</h3>
+        <p>Pagegloss reads the line on your iPad first, so a photocopied chapter works like any other PDF.</p>
+        <div class="shot crop"><img src="/images/hold-word.jpg" alt="A scanned page in Pagegloss with the word grandeur held; the panel shows English to Spanish and the translation Grandeza." loading="lazy" width="900" height="1200"></div>
+      </div>
+      <div class="tile">
+        <h3>The whole sentence, explained</h3>
+        <p>A translation of the sentence, and on supported iPads a short explanation written by Apple Intelligence.</p>
+        <div class="shot crop"><img src="/images/sentence.jpg" alt="The sentence panel with a Japanese translation of a sentence and an explanation by Apple Intelligence." loading="lazy" width="900" height="1200"></div>
+      </div>
+      <div class="tile wide">
+        <div class="row">
+          <div class="pad">
+            <h3>Japanese, Chinese, Korean, with a reading</h3>
+            <p>A held word in Japanese shows its reading in Latin letters next to its meaning. Traditional Chinese, Simplified Chinese, Korean, Russian, Greek and Hindi work the same way.</p>
+          </div>
+          <div class="shot"><img src="/images/japanese.jpg" alt="A Japanese page with the word 吾輩 held, its reading wagahai and the English translation I." loading="lazy" width="1400" height="1050"></div>
+        </div>
+      </div>
+      <div class="tile third">
+        <h3>Mark the page</h3>
+        <p>Highlight, underline, strikethrough, in your colours. Notes typed, or written with Apple Pencil and kept as handwriting.</p>
+        <div class="marks"><span class="hl">Highlight</span><span class="ul">Underline</span><span class="st">Strikethrough</span><span class="pen">a Pencil note</span></div>
+      </div>
+      <div class="tile third">
+        <h3>Saved words come back</h3>
+        <p>A short daily review; each word keeps its sentence and a picture of its line.</p>
+        <div class="shot crop top"><img src="/images/review.jpg" alt="The daily review card for grandeur, with the picture of its line and the French meaning." loading="lazy" width="900" height="1200"></div>
+      </div>
+      <div class="tile third">
+        <h3>Translate how you like</h3>
+        <p>On the iPad with Apple's languages, or with your own key. Pagegloss shows what will be sent before anything leaves the iPad.</p>
+        <div class="svc"><span class="on">Apple · on this iPad</span><span>Google</span><span>OpenAI</span><span>Gemini</span><span>DeepSeek</span></div>
+      </div>
+    </div>
+
+    <div class="langs">
+      <div>
+        <h3>Reads in Apple's languages, offline</h3>
+        <p>Download a language once and translation works without internet. Also: a bilingual page view with the page in your language beside or below it, text recognition for scanned PDFs, and read-aloud.</p>
+      </div>
+      <div class="chips"><span>English</span><span>Spanish</span><span>French</span><span>German</span><span>Portuguese</span><span>Italian</span><span>Russian</span><span>Arabic</span><span>Hindi</span><span>Traditional Chinese</span><span>Simplified Chinese</span><span>Japanese</span><span>Korean</span><span class="more">and the rest of Apple's list</span></div>
+    </div>
+  </section>
+
+  <section class="privacy">
+    <div class="privacy-card">
+      <div>
+        <h2>Private by design.</h2>
+        <p>No account, no ads, no analytics, no tracking. Your books and notes never leave the iPad. If you turn on an online service, only the selected text goes to it, straight from the iPad, with your own key.</p>
+        <p style="margin-top:16px"><a href="/privacy/">Read the privacy policy →</a></p>
+      </div>
+      <ul class="flow">
+        <li><span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="2.5" width="12" height="15" rx="2"/><path d="M8 15h4"/></svg></span><div><b>Your documents stay here</b><span>On the iPad, inside the app. Delete the app and they are gone.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4"/></svg></span><div><b>Only selected text can leave</b><span>And only to a service you turned on, directly from the iPad.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="2"/><path d="M7 9V6.5a3 3 0 0 1 6 0V9"/></svg></span><div><b>Keys in the Keychain</b><span>Your API key is stored by iPadOS and sent only to that service.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M5.5 5.5l9 9"/></svg></span><div><b>Nothing to sign up for</b><span>No account. No analytics. No server of ours in between.</span></div></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <span>© 2026 Pagegloss · For iPad</span>
+    <nav><a href="/support/">Support</a><a href="/privacy/">Privacy policy</a><span class="mail">support@pagegloss.dev</span></nav>
+  </div>
+</footer>
+
 </body>
 </html>
