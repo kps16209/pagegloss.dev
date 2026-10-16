@@ -215,6 +215,9 @@ html.js .theme { display: inline-flex; }
 .tile h3 { font-size: 22px; font-weight: 600; letter-spacing: -.015em; }
 .tile p { color: var(--muted); font-size: 15.5px; max-width: 52ch; }
 .tile.wide .row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 28px; align-items: end; }
+/* A portrait picture (the bilingual page): a narrower picture column, kept to a readable height. */
+.tile.wide .row.tall { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); }
+.tile.wide .row.tall .shot { max-width: 440px; width: 100%; justify-self: end; }
 .tile .pad { padding-bottom: 26px; }
 
 .shot { border-radius: 14px 14px 0 0; overflow: hidden; border: 1px solid var(--line); border-bottom: 0; background: var(--page); min-width: 0; margin-top: auto; }
@@ -296,6 +299,8 @@ html.js .theme { display: inline-flex; }
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .hero, .privacy-card, .langs, .tile.wide .row { grid-template-columns: 1fr; }
+  .tile.wide .row.tall { grid-template-columns: 1fr; }
+  .tile.wide .row.tall .shot { justify-self: center; }
   .hero .copy { padding-bottom: 8px; }
   .tile, .tile.third { grid-column: span 6; }
   .nav, .hero, .sect, .privacy, .foot-in, .doc, .bar { padding-left: 18px; padding-right: 18px; }
