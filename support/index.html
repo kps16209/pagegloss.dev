@@ -5,47 +5,72 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pagegloss Support</title>
 <meta name="description" content="Help with Pagegloss, the iPad reader: getting started, translating, your documents, and how to contact support.">
+<meta name="theme-color" content="#1d5d52">
+<link rel="icon" href="/images/icon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="stylesheet" href="/style.css">
+<script src="/theme.js"></script>
 </head>
-<body>
-<div class="wrap">
-  <header>
-    <a class="brand" href="/">Pagegloss</a>
-    <nav><a href="/support/" aria-current="page">Support</a><a href="/privacy/">Privacy</a></nav>
-  </header>
-  <main>
-    <h1>Support</h1>
+<body class="doc-page">
 
-    <div class="card">
-      <p><strong>Write to</strong> <span class="email">support@pagegloss.dev</span></p>
-      <p class="muted">Please say which iPad and iPadOS version you use and what you were doing. Do not send the contents of private documents.</p>
-    </div>
+<header>
+  <div class="nav">
+    <a class="brand" href="/"><img src="/images/icon-64.png" alt="" width="28" height="28">Pagegloss</a>
+    <nav>
+      <a href="/support/" aria-current="page">Support</a>
+      <a href="/privacy/">Privacy</a>
+      <div class="theme" role="group" aria-label="Appearance">
+        <button type="button" data-theme="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+      </div>
+    </nav>
+  </div>
+</header>
 
-    <h2>Getting started</h2>
-    <h3>How do I look up a word?</h3>
-    <p>Open a PDF, ebook or picture, then touch and hold the word. A panel opens with its meaning. Choose <strong>Whole sentence</strong> to translate the sentence around it.</p>
-    <h3>How do I choose my languages?</h3>
-    <p>Tap the language pair at the top of the panel. Choose the language the book is written in and the language you want the answer in.</p>
-    <h3>Can I try it without setting anything up?</h3>
-    <p>Yes. Tap <strong>Try sample</strong> in an empty library and hold the word “mature”.</p>
+<main class="doc">
+  <h1>Support</h1>
+  <div class="toc" aria-label="On this page">
+    <a href="#getting-started">Getting started</a>
+    <a href="#translating">Translating</a>
+    <a href="#your-documents">Your documents</a>
+  </div>
 
-    <h2>Translating</h2>
-    <h3>Does it work offline?</h3>
-    <p>Apple's translation works without internet once you download the languages (Settings › Translation service › Apple Translation). Apple offers a limited list of languages.</p>
-    <h3>What are API keys?</h3>
-    <p>Online services such as Google, OpenAI, Gemini and DeepSeek can explain a word in its context. You can add your own key under Settings › Translation service. The key is stored in your iPad's Keychain and sent only to that service. Using a key may cost money on your account with that service; the app shows an estimate under Usage.</p>
-    <h3>Where does my text go?</h3>
-    <p>Nowhere, unless you turn on an online service. See the <a href="/privacy/">privacy policy</a>.</p>
+  <div class="card">
+    <p><strong>Write to</strong> <span class="email">support@pagegloss.dev</span></p>
+    <p>Please say which iPad and iPadOS version you use and what you were doing. Do not send the contents of private documents.</p>
+  </div>
 
-    <h2>Your documents</h2>
-    <h3>Which files can I open?</h3>
-    <p>PDF, EPUB and AZW3 without copy protection, and pictures of pages from Photos, Files or the camera. Pagegloss reads a picture's text on your iPad, and the text recognition tools make scanned PDF pages selectable.</p>
-    <h3>Where are my documents stored?</h3>
-    <p>On your iPad, inside the app. Deleting the app deletes them, so keep your originals in Files.</p>
-    <h3>Can I write notes with Apple Pencil?</h3>
-    <p>Yes. A note can hold typed words and handwriting together; the handwriting is kept as you wrote it.</p>
-  </main>
-  <footer><a href="/">Pagegloss</a> · <a href="/privacy/">Privacy policy</a></footer>
-</div>
+  <h2 id="getting-started">Getting started</h2>
+  <h3>How do I look up a word?</h3>
+  <p>Open a PDF, ebook or picture, then touch and hold the word. A panel opens with its meaning. Choose <strong>Whole sentence</strong> to translate the sentence around it.</p>
+  <h3>How do I choose my languages?</h3>
+  <p>Tap the language pair at the top of the panel. Choose the language the book is written in and the language you want the answer in.</p>
+  <h3>Can I try it without setting anything up?</h3>
+  <p>Yes. Tap <strong>Try sample</strong> in an empty library and hold the word “mature”.</p>
+
+  <h2 id="translating">Translating</h2>
+  <h3>Does it work offline?</h3>
+  <p>Apple's translation works without internet once you download the languages (Settings › Translation service › Apple Translation). Apple offers a limited list of languages.</p>
+  <h3>What are API keys?</h3>
+  <p>Online services such as Google, OpenAI, Gemini and DeepSeek can explain a word in its context. You can add your own key under Settings › Translation service. The key is stored in your iPad's Keychain and sent only to that service. Using a key may cost money on your account with that service; the app shows an estimate under Usage.</p>
+  <h3>Where does my text go?</h3>
+  <p>Nowhere, unless you turn on an online service. See the <a href="/privacy/">privacy policy</a>.</p>
+
+  <h2 id="your-documents">Your documents</h2>
+  <h3>Which files can I open?</h3>
+  <p>PDF, EPUB and AZW3 without copy protection, and pictures of pages from Photos, Files or the camera. Pagegloss reads a picture's text on your iPad, and the text recognition tools make scanned PDF pages selectable.</p>
+  <h3>Where are my documents stored?</h3>
+  <p>On your iPad, inside the app. Deleting the app deletes them, so keep your originals in Files.</p>
+  <h3>Can I write notes with Apple Pencil?</h3>
+  <p>Yes. A note can hold typed words and handwriting together; the handwriting is kept as you wrote it.</p>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <span>© 2026 Pagegloss · For iPad</span>
+    <nav><a href="/">Home</a><a href="/privacy/">Privacy policy</a><span class="mail">support@pagegloss.dev</span></nav>
+  </div>
+</footer>
+
 </body>
 </html>
