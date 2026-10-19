@@ -8,6 +8,11 @@
 <meta name="theme-color" content="#1d5d52">
 <link rel="icon" href="/images/icon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/support/">
+<link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/support/">
+<link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/support/">
+<link rel="alternate" hreflang="en" href="https://pagegloss.dev/support/">
+<link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/support/">
 <link rel="stylesheet" href="/style.css">
 <script src="/theme.js"></script>
 </head>
@@ -19,6 +24,15 @@
     <nav>
       <a href="/support/" aria-current="page">Support</a>
       <a href="/privacy/">Privacy</a>
+      <details class="lang-menu">
+        <summary><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2 2.1 3 4.6 3 7.5s-1 5.4-3 7.5c-2-2.1-3-4.6-3-7.5s1-5.4 3-7.5z"/></svg><span class="vh">Language: </span>English</summary>
+        <ul>
+          <li><a href="/zh-hant/support/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/zh-hans/support/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+          <li><a href="/ja/support/" hreflang="ja" lang="ja">日本語</a></li>
+          <li><a href="/support/" hreflang="en" lang="en" aria-current="true">English</a></li>
+        </ul>
+      </details>
       <div class="theme" role="group" aria-label="Appearance">
         <button type="button" data-theme="light" aria-pressed="false">Light</button>
         <button type="button" data-theme="dark" aria-pressed="false">Dark</button>

@@ -83,7 +83,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 /* ---------- header ---------- */
 .nav {
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px;
   padding: 20px 28px; max-width: 1120px; margin: 0 auto; position: relative;
 }
 .brand {
@@ -92,7 +92,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .brand img { width: 28px; height: 28px; border-radius: 7px; }
 .nav nav { display: flex; align-items: center; gap: 22px; font-size: 15px; }
-.nav nav a { color: var(--muted); text-decoration: none; }
+.nav nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
 .nav nav a[aria-current="page"] { color: var(--accent); }
 .nav nav a:hover { color: var(--fg); }
 
@@ -103,9 +103,39 @@ html.js .theme { display: inline-flex; }
   background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 2px;
 }
 .theme button {
-  padding: 4px 11px; border-radius: 999px; font-size: 13px; color: var(--muted); line-height: 1.5;
+  padding: 4px 11px; border-radius: 999px; font-size: 13px; color: var(--muted); line-height: 1.5; white-space: nowrap;
 }
 .theme button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+
+/* the language menu: a plain <details>, so it works without JavaScript; theme.js only closes it
+   on a click elsewhere or Escape */
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.lang-menu { position: relative; }
+.lang-menu summary {
+  display: flex; align-items: center; gap: 6px; list-style: none; cursor: pointer;
+  color: var(--muted); white-space: nowrap;
+}
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary::after {
+  content: ""; width: 6px; height: 6px; margin: -3px 1px 0 1px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg);
+}
+.lang-menu[open] summary::after { margin-top: 3px; transform: rotate(-135deg); }
+.lang-menu summary:hover { color: var(--fg); }
+.lang-menu summary svg { width: 16px; height: 16px; flex: none; }
+.lang-menu ul {
+  position: absolute; right: 0; top: calc(100% + 10px); z-index: 10; min-width: 150px;
+  list-style: none; margin: 0; padding: 6px; border-radius: 14px;
+  background: var(--bg); border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(0, 0, 0, .18);
+}
+.nav nav .lang-menu ul a {
+  display: block; padding: 7px 12px; border-radius: 9px; color: var(--fg); font-size: 15px; white-space: nowrap;
+}
+.nav nav .lang-menu ul a:hover { background: var(--card); color: var(--fg); }
+.nav nav .lang-menu ul a[aria-current="true"] { color: var(--accent); font-weight: 600; }
+.sheet .lang-menu summary { color: var(--ivory-muted); }
+.sheet .lang-menu summary:hover { color: var(--ivory); }
+.sheet .lang-menu ul :focus-visible { outline-color: var(--accent); }
 
 /* ---------- green sheet (home hero) ---------- */
 .sheet {
@@ -300,6 +330,32 @@ html.js .theme { display: inline-flex; }
 .doc .toc a:hover { color: var(--accent); }
 .doc-page .foot { margin-top: 0; }
 
+/* ---------- Chinese and Japanese pages (/zh-hant/, /zh-hans/, /ja/) ----------
+   The same system fonts for Latin text, then the system's own Chinese or Japanese fonts. Headings lose
+   the negative tracking, which crowds CJK characters, and line lengths are set in em, since one CJK
+   character is about two "ch" wide. */
+:root:lang(zh-Hant) {
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti TC", "Noto Serif CJK TC", PMingLiU, serif;
+}
+:root:lang(zh-Hans) {
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC", "Noto Serif CJK SC", SimSun, serif;
+}
+:root:lang(ja) {
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, "Noto Sans CJK JP", sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP", serif;
+}
+:root:is(:lang(zh), :lang(ja)) :is(h1, h2, h3) { letter-spacing: 0; word-break: auto-phrase; }
+/* Chinese headings break at punctuation and spaces, not mid-phrase, unless a line would overflow */
+:root:lang(zh) :is(h1, h2, h3) { word-break: keep-all; overflow-wrap: anywhere; }
+:root:is(:lang(zh), :lang(ja)) .hero h1 { font-size: clamp(36px, 4.6vw, 56px); line-height: 1.15; }
+:root:is(:lang(zh), :lang(ja)) .kicker { max-width: 16em; line-height: 1.2; }
+:root:is(:lang(zh), :lang(ja)) .lede { max-width: 24em; }
+:root:is(:lang(zh), :lang(ja)) .sub { max-width: 32em; }
+:root:is(:lang(zh), :lang(ja)) .tile p { max-width: 28em; }
+:root:is(:lang(zh), :lang(ja)) .privacy-card p { max-width: 24em; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .hero, .privacy-card, .langs, .tile.wide .row { grid-template-columns: 1fr; }
@@ -313,8 +369,11 @@ html.js .theme { display: inline-flex; }
 }
 @media (max-width: 560px) {
   .nav { flex-wrap: wrap; gap: 12px 16px; padding-top: 16px; padding-bottom: 14px; }
-  .nav nav { flex-basis: 100%; justify-content: space-between; gap: 14px; font-size: 14px; }
+  .nav nav { flex-basis: 100%; flex-wrap: wrap; justify-content: space-between; gap: 10px 14px; font-size: 14px; }
   .nav nav .theme { margin-left: auto; }
+  /* the language menu moves up beside the brand, where a phone row has room */
+  .nav .lang-menu { position: absolute; top: 16px; right: 18px; }
+  .nav .lang-menu summary { height: 29px; }
   .nav .cta-sm { display: none; }
   .demo .ptitle b { font-size: 20px; }
   .doc h1 { font-size: 34px; }
