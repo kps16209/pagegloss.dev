@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pagegloss.dev/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/support/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/support/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/privacy/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/privacy/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/zh-hant/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/zh-hant/support/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/support/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/zh-hant/privacy/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/privacy/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/zh-hans/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/zh-hans/support/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/support/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/zh-hans/privacy/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/privacy/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/ja/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/ja/support/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/support/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/support/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/support/"/>
+  </url>
+  <url>
+    <loc>https://pagegloss.dev/ja/privacy/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pagegloss.dev/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/privacy/"/>
+  </url>
+</urlset>
