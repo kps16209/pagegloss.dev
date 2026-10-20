@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagegloss · 輕觸一個字，讀懂整頁。</title>
+<meta name="description" content="輕觸一個字，讀懂整頁。Pagegloss 是一款 iPad 閱讀器，適用於 PDF、電子書和書頁照片：按住一個字，就能看到它在所在句子中的意思，並在你的 iPad 上翻譯。無需帳號，沒有廣告，不追蹤。">
+<meta name="theme-color" content="#1d5d52">
+<link rel="icon" href="/images/icon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="alternate" hreflang="zh-Hant" href="https://pagegloss.dev/zh-hant/">
+<link rel="alternate" hreflang="zh-Hans" href="https://pagegloss.dev/zh-hans/">
+<link rel="alternate" hreflang="ja" href="https://pagegloss.dev/ja/">
+<link rel="alternate" hreflang="en" href="https://pagegloss.dev/">
+<link rel="alternate" hreflang="x-default" href="https://pagegloss.dev/">
+<link rel="stylesheet" href="/style.css">
+<script src="/theme.js"></script>
+</head>
+<body>
+
+<header class="sheet">
+  <div class="nav">
+    <a class="brand" href="/zh-hant/"><img src="/images/icon-64.png" alt="" width="28" height="28">Pagegloss</a>
+    <nav>
+      <a href="/zh-hant/support/">支援</a>
+      <a href="/zh-hant/privacy/">隱私權</a>
+      <details class="lang-menu">
+        <summary><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2 2.1 3 4.6 3 7.5s-1 5.4-3 7.5c-2-2.1-3-4.6-3-7.5s1-5.4 3-7.5z"/></svg><span class="vh">語言：</span>繁體中文</summary>
+        <ul>
+          <li><a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" aria-current="true">繁體中文</a></li>
+          <li><a href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+          <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li>
+          <li><a href="/" hreflang="en" lang="en">English</a></li>
+        </ul>
+      </details>
+      <div class="theme" role="group" aria-label="外觀">
+        <button type="button" data-theme="light" aria-pressed="false">淺色</button>
+        <button type="button" data-theme="dark" aria-pressed="false">深色</button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <div class="copy">
+      <span class="eyebrow"><i></i>即將登陸 App Store · iPad</span>
+      <h1>輕觸一個字，<br>讀懂整<span>頁。</span></h1>
+      <p class="lede">適用於 PDF、電子書和書頁照片的 iPad 閱讀器。按住任何一個字，就能看到它在所在句子中的意思，並在你的 iPad 上翻譯。</p>
+      <div class="cta">
+        <span class="pill solid">即將登陸 App Store</span>
+        <a class="pill ghost" href="#how">看看如何運作</a>
+      </div>
+      <p class="fine">PDF · EPUB · AZW3 · 照片和掃描件。無需帳號，沒有廣告，不追蹤。</p>
+    </div>
+
+    <div class="demo" aria-label="按住的字和它的意思，就像在 iPad 上顯示的一樣">
+      <div class="book" lang="en">
+        <span class="ch">Chapter XIV · Recapitulation and Conclusion</span>
+        There is <span class="held">grandeur<span class="finger"></span></span> in this view of life, with its several powers, having been originally breathed into a few forms or into one; and that, whilst this planet has gone cycling on according to the fixed law of gravity, from so simple a beginning endless forms most beautiful and most wonderful have been, and are being, evolved.
+      </div>
+      <div class="panel">
+        <div class="grip"></div>
+        <div class="ptitle"><b lang="en">grandeur</b><span class="ipa">/ˈɡrændʒər/</span></div>
+        <div class="psub">第 487 頁 · 已辨識文字</div>
+        <div class="lang"><span>英文 → 繁體中文</span><span aria-hidden="true">⌄</span></div>
+        <div class="ready">在此 iPad 上 · 可離線使用</div>
+        <div class="segc"><span class="on">單字</span><span>整句</span></div>
+        <div class="tr"><small>翻譯</small><div class="out">宏偉</div></div>
+        <div class="acts"><span>拷貝翻譯</span><span>儲存</span><span>標示重點</span><span>備註</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="bar" aria-label="重點一覽">
+    <div><b>真正的書，真正的 PDF</b><span>沒有防拷保護的 PDF、EPUB 和 AZW3。</span></div>
+    <div><b>書頁照片</b><span>照片、掃描件和相機。文字在 iPad 上辨識。</span></div>
+    <div><b>離線翻譯</b><span>Apple 支援的語言，下載後即可使用。</span></div>
+    <div><b>想用的話，也可用自己的金鑰</b><span>Google、OpenAI、Gemini 或 DeepSeek。</span></div>
+  </section>
+
+  <section class="sect" id="how">
+    <h2 class="kicker">字典 App 做不到的五件事。</h2>
+    <p class="sub">Pagegloss 會讀你所查字詞周圍的句子，能處理其他閱讀器打不開的頁面，記住你選定的意思，並把你的學習集中在一處。</p>
+
+    <div class="tiles">
+      <div class="tile">
+        <span class="num">01 · 語境中的意思</span>
+        <h3>按住一個字：看它在這句話裡的意思</h3>
+        <p>不是把所有詞義列出來。面板會先顯示這句話用到的那個意思，並附上發音，即使是掃描的頁面也一樣。</p>
+        <div class="shot crop"><img src="/images/hold-word.gif" alt="Pagegloss 中的一頁掃描件：按住 grandeur 一字，面板升起，顯示它的發音和繁體中文意思「宏偉」。" loading="lazy" width="720" height="594"></div>
+      </div>
+      <div class="tile">
+        <span class="num">01 · 語境中的意思</span>
+        <h3>整句翻譯，還有解釋</h3>
+        <p>輕點一下就能翻譯整句。在支援的 iPad 上，Apple Intelligence 會在 iPad 上解釋這句話的意思。</p>
+        <div class="shot crop"><img src="/images/sentence.gif" alt="按住 grandeur 一字，接著「整句」把句子翻譯成日文，並附上 Apple Intelligence 的簡短解釋。" loading="lazy" width="720" height="594"></div>
+      </div>
+
+      <div class="tile wide">
+        <div class="row">
+          <div class="pad">
+            <span class="num">02 · 掃描件和照片</span>
+            <h3>其他閱讀器用不了的頁面</h3>
+            <p>影印的章節、手機拍下的書頁、掃描的 PDF：Pagegloss 會在你的 iPad 上辨識其中的文字。你可以按住一個字，在幾行文字周圍拖出一個框來翻譯或解釋，或輕點圖片中的網址或電話號碼。</p>
+          </div>
+          <div class="shot"><img src="/images/box-reader.gif" alt="在一頁掃描件的一段文字周圍拖出一個框，辨識出的文字隨即出現，「翻譯」把它譯成日文，並附上 Apple Intelligence 的簡短解釋。" loading="lazy" width="720" height="540"></div>
+        </div>
+      </div>
+
+      <div class="tile wide">
+        <div class="row">
+          <div class="pad">
+            <span class="num">03 · 你的術語</span>
+            <h3>選定一次意思，整份文件通用</h3>
+            <p>在經濟學讀物裡，「mature」的意思是「到期」。固定這個意思後，之後每次查詢都會先顯示它；「翻譯頁面」和 AI 服務也會依照它翻譯。你的術語列表可以匯出到 Anki 或試算表，也可以在頁面上加底線標出。</p>
+          </div>
+          <div class="shot"><img src="/images/terms.gif" alt="按住 mature 一字；在「更多」中選擇「在此文件中使用這個意思」，開啟一張意思為「到期」的卡片，按下「固定」後，面板會先顯示「你的術語」。" loading="lazy" width="720" height="532"></div>
+        </div>
+      </div>
+
+      <div class="tile wide">
+        <div class="row tall">
+          <div class="pad">
+            <span class="num">04 · 雙語頁面</span>
+            <h3>原文下面，就是你的語言</h3>
+            <p>打開雙語檢視，整頁的譯文就會出現在原文下方或旁邊。輕點一個段落，兩邊會同時亮起，讓你不會找不到讀到哪裡。</p>
+          </div>
+          <div class="shot"><img src="/images/bilingual.gif" alt="一頁掃描件下方出現這一頁的日文譯文；讓頁面可選取後，輕點一個段落，原頁和日文譯文中的這一段會同時亮起。" loading="lazy" width="480" height="602"></div>
+        </div>
+      </div>
+
+      <div class="tile wide">
+        <div class="row">
+          <div class="pad">
+            <span class="num">05 · 讀書的好地方</span>
+            <h3>搜尋所有內容，正確引用</h3>
+            <p>搜尋 iPad 上每份文件的文字；輕點一個結果，就會打開那一頁並標出這些字詞。「拷貝引文」會以簡潔、APA、MLA、Chicago 或 Harvard 格式附上頁碼。已儲存的字詞會出現在每天的簡短複習中，學習表則能把它們連同所在的句子一起列印出來。</p>
+          </div>
+          <div class="shot"><img src="/images/search.jpg" alt="在資料庫中搜尋 opportunity cost，符合的結果依文件分組列出；選中的結果會打開 PDF，並框出這些字詞。" loading="lazy" width="1200" height="864"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="also">還有這些</h3>
+    <div class="tiles">
+      <div class="tile third">
+        <h3>在頁面上做標記</h3>
+        <p>標示重點、底線、刪除線，顏色由你決定。打字的筆記和 Apple Pencil 手寫的筆記，都在同一頁上。</p>
+        <div class="shot crop top"><img src="/images/marks.gif" alt="在一頁掃描件上，一個片語被標示重點、一行加上底線、幾個字被刪除，接著用 Apple Pencil 寫下 reading 一字。" loading="lazy" width="640" height="420"></div>
+      </div>
+      <div class="tile third">
+        <h3>日文、中文、韓文，附上讀音</h3>
+        <p>按住的字會在意思旁邊，以拉丁字母顯示它的讀音。</p>
+        <div class="shot crop top"><img src="/images/japanese.jpg" alt="一頁日文，按住「吾輩」一詞，顯示讀音 wagahai 和英文翻譯 I。" loading="lazy" width="1400" height="1050"></div>
+      </div>
+      <div class="tile third">
+        <h3>用你喜歡的方式翻譯</h3>
+        <p>在 iPad 上使用 Apple 支援的語言，或用你自己的金鑰。任何內容離開 iPad 之前，Pagegloss 都會先讓你看到將要傳送的內容。</p>
+        <div class="svc"><span class="on">Apple · 在此 iPad 上</span><span>Google</span><span>OpenAI</span><span>Gemini</span><span>DeepSeek</span></div>
+      </div>
+    </div>
+    <div class="chips extras" aria-label="更多功能"><span>捷徑和 Siri</span><span>選單列和鍵盤快速鍵</span><span>單字的發音和朗讀</span><span>淺色和深色閱讀主題</span><span>資料夾和最愛</span><span>匯出筆記和標示重點</span></div>
+
+    <div class="langs">
+      <div>
+        <h3>支援 Apple 的語言，可離線使用</h3>
+        <p>語言只需下載一次，之後翻譯不需要網路。</p>
+      </div>
+      <div class="chips"><span>英文</span><span>西班牙文</span><span>法文</span><span>德文</span><span>葡萄牙文</span><span>義大利文</span><span>俄文</span><span>阿拉伯文</span><span>印地文</span><span>繁體中文</span><span>簡體中文</span><span>日文</span><span>韓文</span><span class="more">以及 Apple 清單中的其他語言</span></div>
+    </div>
+  </section>
+
+  <section class="privacy">
+    <div class="privacy-card">
+      <div>
+        <h2>從設計開始，就重視隱私。</h2>
+        <p>無需帳號，沒有廣告，沒有分析，不追蹤。你的書和筆記永遠不會離開 iPad。如果你開啟線上服務，只有你選取的文字會用你自己的金鑰，從 iPad 直接傳送給該服務。</p>
+        <p style="margin-top:16px"><a href="/zh-hant/privacy/">閱讀隱私權政策 →</a></p>
+      </div>
+      <ul class="flow">
+        <li><span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="2.5" width="12" height="15" rx="2"/><path d="M8 15h4"/></svg></span><div><b>你的文件留在這裡</b><span>在 iPad 上的 App 裡。刪除 App，文件也會一併消失。</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4"/></svg></span><div><b>只有選取的文字可能離開</b><span>而且只會從 iPad 直接傳送到你開啟的服務。</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="2"/><path d="M7 9V6.5a3 3 0 0 1 6 0V9"/></svg></span><div><b>金鑰存放在鑰匙圈</b><span>你的 API 金鑰由 iPadOS 儲存，只會傳送給該服務。</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M5.5 5.5l9 9"/></svg></span><div><b>不用註冊任何東西</b><span>沒有帳號，沒有分析，中間也沒有我們的伺服器。</span></div></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <span>© 2026 Pagegloss · 適用於 iPad</span>
+    <nav><a href="/zh-hant/support/">支援</a><a href="/zh-hant/privacy/">隱私權政策</a><span class="mail">support@pagegloss.dev</span></nav>
+  </div>
+</footer>
+
+</body>
+</html>
