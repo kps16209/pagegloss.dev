@@ -1,3 +1,8 @@
+/* Hallmark · checked: 2026-10-23 · genre: editorial (inferred) · copy: verbatim
+ * fixed: 7a, 26a, 26b, 34, 48, 50, F1 · kept by the owner: the hero pill, the feature numbers, the formats line
+ * built: the project · redesign: polish · v2.0.0 */
+/* Hallmark · dismissed F24 · the language menu floats over the green sheet and the page, so it keeps both its edge and its shadow */
+
 /* Pagegloss website · pagegloss.dev
    System fonts only; no external resources. Light is the default, dark follows the
    system unless the viewer chooses; theme.js sets data-theme on <html>. */
@@ -19,6 +24,25 @@
   --mark: #f3dd8f;
   --page: #f3f4f1;
   --shadow: 0 24px 60px rgba(23, 74, 66, .25);
+  --menu-shadow: 0 12px 32px rgba(0, 0, 0, .18);
+  /* light lines and fills drawn on the green sheet */
+  --on-sheet-fill: rgba(255, 255, 255, .1);
+  --on-sheet-edge: rgba(255, 255, 255, .15);
+  --on-sheet-line: rgba(255, 255, 255, .18);
+  --on-sheet-ghost: rgba(255, 255, 255, .3);
+  /* the hold-a-word demo is a picture of the iPad's light reading surface, so these stay the same in both themes */
+  --demo-page: #f3f4f1;
+  --demo-panel: #fbfcfa;
+  --demo-fg: #17201b;
+  --demo-muted: #5d6861;
+  --demo-line: #e5e8e3;
+  --demo-accent: #2f6b4f;
+  --demo-on-accent: #fbfcfa;
+  --demo-mark: #f3dd8f;
+  --demo-tint: #eaf2ec;
+  --demo-shadow: 0 -10px 60px rgba(0, 0, 0, .25);
+  --demo-panel-shadow: 0 -8px 40px rgba(23, 74, 66, .12);
+  --hand: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
   --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -66,9 +90,10 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
 body {
   margin: 0;
+  overflow-x: clip;
   background: var(--bg);
   color: var(--fg);
   font: 16px/1.55 var(--sans);
@@ -79,7 +104,10 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
 p, ul { margin: 0; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.sheet :focus-visible { outline-color: var(--ivory); }
+.sheet :focus-visible, .foot :focus-visible { outline-color: var(--ivory); }
+/* pressed: a quick dim while a link or button is held */
+:is(a, button, summary):active { opacity: .7; }
+button:disabled { opacity: .5; cursor: default; }
 
 /* ---------- header ---------- */
 .nav {
@@ -126,7 +154,7 @@ html.js .theme { display: inline-flex; }
 .lang-menu ul {
   position: absolute; right: 0; top: calc(100% + 10px); z-index: 10; min-width: 150px;
   list-style: none; margin: 0; padding: 6px; border-radius: 14px;
-  background: var(--bg); border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(0, 0, 0, .18);
+  background: var(--bg); border: 1px solid var(--line); box-shadow: var(--menu-shadow);
 }
 .nav nav .lang-menu ul a {
   display: block; padding: 7px 12px; border-radius: 9px; color: var(--fg); font-size: 15px; white-space: nowrap;
@@ -143,10 +171,10 @@ html.js .theme { display: inline-flex; }
   color: var(--ivory); position: relative; overflow: hidden;
 }
 .sheet .brand { color: var(--ivory); }
-.sheet .brand img { box-shadow: 0 0 0 1px rgba(255, 255, 255, .15); }
+.sheet .brand img { box-shadow: 0 0 0 1px var(--on-sheet-edge); }
 .sheet .nav nav a { color: var(--ivory-muted); }
 .sheet .nav nav a:hover { color: var(--ivory); }
-.sheet .theme { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .18); }
+.sheet .theme { background: var(--on-sheet-fill); border-color: var(--on-sheet-line); }
 .sheet .theme button { color: var(--ivory-muted); }
 .sheet .theme button[aria-pressed="true"] { background: var(--ivory); color: var(--deep2); }
 
@@ -158,7 +186,7 @@ html.js .theme { display: inline-flex; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600;
   letter-spacing: .04em; padding: 6px 12px; border-radius: 999px;
-  background: rgba(255, 255, 255, .1); color: var(--ivory);
+  background: var(--on-sheet-fill); color: var(--ivory);
 }
 .eyebrow i { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); display: inline-block; }
 .hero h1 {
@@ -172,15 +200,15 @@ html.js .theme { display: inline-flex; }
   font-weight: 600; font-size: 15px; text-decoration: none;
 }
 .pill.solid { background: var(--ivory); color: var(--deep2); }
-.pill.ghost { border: 1px solid rgba(255, 255, 255, .3); color: var(--ivory); }
+.pill.ghost { border: 1px solid var(--on-sheet-ghost); color: var(--ivory); }
 .fine { font-size: 13.5px; color: var(--ivory-muted); margin-top: 14px; }
 
 /* ---------- the hold-a-word demo ---------- */
 .demo {
-  position: relative; border-radius: 22px 22px 0 0; background: #f3f4f1; border: 1px solid #e5e8e3; border-bottom: 0;
-  padding: 34px 34px 0; overflow: hidden; min-width: 0; box-shadow: 0 -10px 60px rgba(0, 0, 0, .25);
+  position: relative; border-radius: 22px 22px 0 0; background: var(--demo-page); border: 1px solid var(--demo-line); border-bottom: 0;
+  padding: 34px 34px 0; overflow: hidden; min-width: 0; box-shadow: var(--demo-shadow);
   /* the demo is a picture of the iPad's light reading surface, so its colours are fixed in both themes */
-  --d-fg: #17201b; --d-muted: #5d6861; --d-line: #e5e8e3; --d-accent: #2f6b4f; --d-mark: #f3dd8f; --d-tint: #eaf2ec;
+  --d-fg: var(--demo-fg); --d-muted: var(--demo-muted); --d-line: var(--demo-line); --d-accent: var(--demo-accent); --d-mark: var(--demo-mark); --d-tint: var(--demo-tint);
   color: var(--d-fg);
 }
 .demo .book { font-family: var(--serif); font-size: 17.5px; line-height: 1.6; max-width: 60ch; }
@@ -200,8 +228,8 @@ html.js .theme { display: inline-flex; }
   100% { opacity: 0; }
 }
 .demo .panel {
-  margin: 26px -8px 0; background: #ffffff; border: 1px solid var(--d-line); border-bottom: 0;
-  border-radius: 22px 22px 0 0; padding: 14px 22px 22px; box-shadow: 0 -8px 40px rgba(23, 74, 66, .12);
+  margin: 26px -8px 0; background: var(--demo-panel); border: 1px solid var(--d-line); border-bottom: 0;
+  border-radius: 22px 22px 0 0; padding: 14px 22px 22px; box-shadow: var(--demo-panel-shadow);
   font-family: var(--sans);
 }
 .demo .grip { width: 40px; height: 5px; border-radius: 3px; background: var(--d-line); margin: 0 auto 12px; }
@@ -216,7 +244,7 @@ html.js .theme { display: inline-flex; }
 .demo .ready { font-size: 12.5px; color: var(--d-muted); margin-top: 6px; }
 .demo .segc { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; background: var(--d-tint); border-radius: 999px; padding: 3px; }
 .demo .segc span { text-align: center; padding: 9px 0; border-radius: 999px; font-weight: 500; font-size: 15px; }
-.demo .segc span.on { background: var(--d-accent); color: #ffffff; }
+.demo .segc span.on { background: var(--d-accent); color: var(--demo-on-accent); }
 .demo .tr { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--d-line); }
 .demo .tr small { display: block; font-size: 12.5px; color: var(--d-muted); }
 .demo .tr .out { font-size: 21px; margin-top: 2px; }
@@ -266,7 +294,7 @@ html.js .theme { display: inline-flex; }
 .marks .hl { background: var(--mark); border-color: transparent; }
 .marks .ul { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .marks .st { text-decoration: line-through; }
-.marks .pen { font-family: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive; color: var(--accent); }
+.marks .pen { font-family: var(--hand); color: var(--accent); }
 .svc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .svc span { font-size: 13.5px; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); }
 .svc span.on { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
@@ -358,8 +386,8 @@ html.js .theme { display: inline-flex; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
-  .hero, .privacy-card, .langs, .tile.wide .row { grid-template-columns: 1fr; }
-  .tile.wide .row.tall { grid-template-columns: 1fr; }
+  .hero, .privacy-card, .langs, .tile.wide .row { grid-template-columns: minmax(0, 1fr); }
+  .tile.wide .row.tall { grid-template-columns: minmax(0, 1fr); }
   .tile.wide .row.tall .shot { justify-self: center; }
   .hero .copy { padding-bottom: 8px; }
   .tile, .tile.third { grid-column: span 6; }
