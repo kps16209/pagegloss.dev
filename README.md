@@ -16,7 +16,9 @@ Static HTML, CSS and one small script, served by GitHub Pages at the custom doma
   browser's localStorage. Without JavaScript the page is light, or dark when the system is. It also
   closes the language menu (a plain `<details>`, which works without JavaScript) on an outside click or Escape.
 - `images/`: App Store screenshots made with public-domain sample pages (resized, metadata removed) and
-  the app icon as favicon and apple-touch-icon.
+  the app icon at 48, 64, 96, 192 and 512 px plus the 180 px apple-touch-icon.
+- `favicon.ico` (16, 32 and 48 px) and `site.webmanifest`: the site icon for browsers and search results.
+  The icons are made from the app's 1024 px Forest icon, with metadata removed.
 
 No analytics, no trackers, no external scripts, fonts or stylesheets, in keeping with the privacy policy.
 Links are root-relative (`/support/`, `/privacy/`, `/ja/support/`), so pages must be served from the domain root.
